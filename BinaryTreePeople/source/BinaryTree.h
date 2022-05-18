@@ -19,6 +19,12 @@ struct Node {
         left = nullptr;
         right = nullptr;
     }
+    ~Node() {
+        delete left;
+        delete right;
+        left = nullptr;
+        right = nullptr;
+    }
 };
 
 class BinaryTree {

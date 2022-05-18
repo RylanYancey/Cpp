@@ -14,7 +14,7 @@ BinaryTree::BinaryTree() {
 BinaryTree & BinaryTree::operator=(BinaryTree &rhs) {
     // if the binary tree is empty, do nothing
     if (rhs.root != nullptr) {
-        // initialize root
+        // initialize root for new binary tree
         this -> root = new Node(rhs.root -> value, rhs.root -> key);
 
         // launch for left and right
