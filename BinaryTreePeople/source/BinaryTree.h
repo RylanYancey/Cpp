@@ -1,4 +1,6 @@
 
+#pragma once
+
 #include <functional>
 
 #include "Person.h"
