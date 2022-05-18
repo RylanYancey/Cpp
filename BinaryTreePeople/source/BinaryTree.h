@@ -20,8 +20,6 @@ struct Node {
         right = nullptr;
     }
     ~Node() {
-        delete left;
-        delete right;
         left = nullptr;
         right = nullptr;
     }
