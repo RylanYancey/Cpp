@@ -20,8 +20,10 @@ struct Node {
         right = nullptr;
     }
     ~Node() {
-        left = nullptr;
-        right = nullptr;
+        if (left != nullptr)
+            delete left;
+        if (right != nullptr)
+            delete right;
     }
 };
 

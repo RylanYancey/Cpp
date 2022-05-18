@@ -29,24 +29,7 @@ BinaryTree & BinaryTree::operator=(BinaryTree &rhs) {
 
 // Destructor, which calls deleteAllRec to delete every node in the tree. 
 BinaryTree::~BinaryTree() {
-    deleteAllRec(root);
-}
-
-// helper function for deleteAllRec
-void BinaryTree::deleteAllRec(Node* root) {
-    // end-of-tree or empty tree. 
-    if (root == nullptr)
-        return;
- 
-    // delete left and right subtree first
-    deleteAllRec(root -> left);
-    deleteAllRec(root -> right);
- 
-    cout << "deleting " << root -> value.getName() << endl; 
-
-    // Delete the current node
     delete root;
-    root = nullptr;
 }
 
 // copy constructor
