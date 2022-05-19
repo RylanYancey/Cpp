@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Person.h"
+#include "../header/Person.h"
 
 Person::Person() {
     name = "invalid";

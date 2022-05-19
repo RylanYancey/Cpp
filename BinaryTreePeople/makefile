@@ -1,21 +1,15 @@
 
-root := $(shell pwd)
-
-header := $(wildcard header/*.h)
-
-source := $(wildcard source/*.cpp)
-
-objects = 
+objects = source/BinaryTree.o source/main.o source/Person.o
 
 build : $(objects)
-	g++ -o edit $(objects)
+	g++ -o bin/build $(objects)
 
-main.o : main.cpp BinaryTree.h
+source/main.o : header/BinaryTree.h source/main.cpp
 
-BinaryTree.o : BinaryTree.cpp BinaryTree.h Person.h
+source/BinaryTree.o : source/BinaryTree.cpp header/BinaryTree.h
 
-Person.o : Person.cpp Person.h
+source/Person.o : source/Person.cpp  header/Person.h
 
 .PHONY : clean
 clean :
-	rm btree $(objects)
+	rm build $(objects)
