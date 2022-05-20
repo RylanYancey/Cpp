@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 20 15:58:19 2022
+# Make data base, printed on Fri May 20 16:38:07 2022
 
 # Variables
 
@@ -16,6 +16,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 DESKTOP_SESSION = plasma
+# environment
+KONSOLE_DBUS_WINDOW = /Windows/1
 # default
 .SHELLFLAGS := -c
 # environment
@@ -37,25 +39,23 @@ XAUTHORITY = /home/ryancey/.Xauthority
 # default
 MAKE_VERSION := 4.1
 # makefile
-CURDIR := /home/ryancey/Cpp/mpi_ringmapping
+CURDIR := /home/ryancey/Cpp/mpi_isprime
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/share/code/code
+_ = /usr/bin/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 4)
 CFLAGS = -c -I./header
 # makefile (from 'makefile', line 10)
-objects := bin/PrimeSeq.o bin/main.o
+objects := bin/main.o
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
-# environment
-IM_CONFIG_PHASE = 2
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -67,15 +67,17 @@ DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-g1CoBufdFq,guid=9d986e9a95595
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-3c5bf616-d805-4464-b2e6-de50c5632903.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-e289b739-8f29-4599-9ac2-61b1379186b6.sock
 # environment
-VSCODE_CWD = /home/ryancey
+VSCODE_CWD = /home/ryancey/Cpp/mpi_isprime
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /apps/openmpi/3.1.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+MPI_INC = /apps/openmpi/3.1.2/include
 # environment
 GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
@@ -85,11 +87,17 @@ SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1580,unix/whitwell:/tmp/.ICE-un
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-TEXTDOMAIN = im-config
+MPI_HOME = /apps/openmpi/3.1.2
+# environment
+WINDOWID = 60817414
+# environment
+KONSOLE_PROFILE_NAME = Default
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# environment
+PROFILEHOME = 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -101,9 +109,13 @@ SSH_AUTH_SOCK = /tmp/ssh-Ciijr28W0LA8/agent.1417
 # environment
 DISPLAY = :0
 # environment
+MPI_PATH = /apps/openmpi/3.1.2/bin
+# environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/ryancey/Cpp/mpi_ringmapping
+MPI_LIB = /apps/openmpi/3.1.2/lib
+# environment
+PWD = /home/ryancey/Cpp/mpi_isprime
 # environment
 KDE_SESSION_VERSION = 5
 # makefile (from 'makefile', line 7)
@@ -115,9 +127,15 @@ SSH_AGENT_PID = 1497
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
+MANPATH = /apps/openmpi/3.1.2/share/man:/usr/share/man
+# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
+# environment
+LD_LIBRARY_PATH = /apps/openmpi/3.1.2/lib
+# environment
+VSCODE_CLI = 1
 # environment
 VSCODE_CODE_CACHE_PATH = /home/ryancey/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
@@ -126,6 +144,8 @@ LOGNAME = ryancey
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 KDE_FULL_SESSION = true
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -136,6 +156,10 @@ XDG_VTNR = 1
 MAKELEVEL := 0
 # environment
 MODULE_VERSION_STACK = 3.2.10
+# environment
+COLORTERM = truecolor
+# environment
+KONSOLE_DBUS_SESSION = /Sessions/1
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -158,10 +182,14 @@ XDG_CURRENT_DESKTOP = KDE
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/ryancey/Cpp
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
+# environment
+LANGUAGE = 
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -173,7 +201,9 @@ MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-LOADEDMODULES = 
+LOADEDMODULES = openmpi/3.1.2
+# environment
+SHELL_SESSION_ID = 1604295537614d9f8fa29e43220ad0c6
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -185,13 +215,15 @@ MODULESHOME = /usr/local/Modules/3.2.10
 # environment
 QT_ACCESSIBILITY = 1
 # environment
-DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
+COLORFGBG = 15;0
 # environment
-TEXTDOMAINDIR = /usr/share/locale/
+DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# environment
+_LMFILES_ = /apps/Modules_new_image/3.2.10/modulefiles/openmpi/3.1.2
 # environment
 MODULE_VERSION = 3.2.10
 # environment
@@ -204,6 +236,8 @@ SUFFIXES :=
 GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
+# environment
+KONSOLE_DBUS_SERVICE = :1.46
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -211,11 +245,13 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2150
+TERM = xterm-256color
+# environment
+VSCODE_PID = 3905
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=102/1024=10%, Rehash=0, Collisions=6/136=4%
+# Load=120/1024=12%, Rehash=0, Collisions=9/154=6%
 
 # Pattern-specific Variable Values
 
@@ -223,10 +259,10 @@ KDE_SESSION_UID = 926
 
 # Directories
 
-# source (device 54, inode 260628357): 4 files, no impossibilities.
+# source (device 54, inode 260628357): 3 files, no impossibilities.
 # . (device 54, inode 258578667): 9 files, no impossibilities.
 
-# 13 files, no impossibilities in 2 directories.
+# 12 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -239,7 +275,7 @@ bin/%.o: source/%.cpp
 
 # Files
 
-all: bin/PrimeSeq.o bin/main.o
+all: bin/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -258,7 +294,8 @@ all: bin/PrimeSeq.o bin/main.o
 # Not a target:
 source/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-20 15:58:12.72523
+ 
+#  Last modified 2022-05-20 16:35:44.607915
 #  File has been updated.
 #  Successfully updated.
 
@@ -269,22 +306,11 @@ makefile:
 #  File has been updated.
 #  Successfully updated.
 
-bin/PrimeSeq.o: source/PrimeSeq.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'PrimeSeq'
-#  Last modified 2022-05-20 15:06:27.722415
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 21):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
-
 # Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -297,7 +323,7 @@ clean:
 bin/main.o: source/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-20 15:55:10.517502
+#  Last modified 2022-05-20 16:27:47.954425
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -322,27 +348,20 @@ bin/main.o: source/main.cpp
 	$(CC) $(CFLAGS) $?
 	mv *.o bin
 
-# Not a target:
-source/PrimeSeq.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-20 14:42:40.578137
-#  File has been updated.
-#  Successfully updated.
-
 # files hash-table stats:
-# Load=10/1024=1%, Rehash=0, Collisions=0/31=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/25=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 26 / storage = 241 B / avg = 9 B
-# current buf: size = 8162 B / used = 241 B / count = 26 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 184 B / avg = 8 B
+# current buf: size = 8162 B / used = 184 B / count = 22 / avg = 8 B
 
-# strcache performance: lookups = 40 / hit rate = 35%
+# strcache performance: lookups = 35 / hit rate = 37%
 # hash-table stats:
-# Load=26/8192=0%, Rehash=0, Collisions=2/40=5%
-# Finished Make data base on Fri May 20 15:58:19 2022
+# Load=22/8192=0%, Rehash=0, Collisions=2/35=6%
+# Finished Make data base on Fri May 20 16:38:07 2022
 
  

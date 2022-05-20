@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/ryancey/Cpp/BinaryTreePeople'
+g++    -c -o source/BinaryTree.o source/BinaryTree.cpp
+g++    -c -o source/main.o source/main.cpp
+g++    -c -o source/Person.o source/Person.cpp
+g++ -o bin/build source/BinaryTree.o source/main.o source/Person.o
+make: Leaving directory '/home/ryancey/Cpp/BinaryTreePeople'
+ 

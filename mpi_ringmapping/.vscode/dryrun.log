@@ -1,9 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/ryancey/Cpp/mpi_ringmapping'
-mpiCC -c -I./header source/PrimeSeq.cpp
-mv *.o bin
-mpiCC -c -I./header source/main.cpp
-mv *.o bin
-mpiCC -o run bin/PrimeSeq.o bin/main.o
-make: Leaving directory '/home/ryancey/Cpp/mpi_ringmapping'
- 
