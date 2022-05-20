@@ -1,7 +1,7 @@
 
 # Compiler Command
-CC = g++
-CFLAGS = -c -Wall -I./header
+CC = mpiCC
+CFLAGS = -c -I./header
 
 # collecting object file names
 src = $(wildcard source/*.cpp)
@@ -12,6 +12,9 @@ objects := $(src1:source/%=bin/%)
 # Compile object files into binary
 all : $(objects)
 	$(CC) -o run $(objects)
+ifneq ($(n),)
+	mpirun -np $(n) run
+endif
 
 # Generate object files by compiling .cpp and .h files
 bin/%.o : source/%.cpp
@@ -22,3 +25,6 @@ bin/%.o : source/%.cpp
 .PHONY : clean
 clean : 
 	rm -rf all $(objects)
+
+
+# cat -e -t -v makefile
