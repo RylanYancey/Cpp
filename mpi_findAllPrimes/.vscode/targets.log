@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 23 08:32:49 2022
+# Make data base, printed on Mon May 23 15:54:32 2022
 
 # Variables
 
@@ -16,8 +16,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 DESKTOP_SESSION = plasma
-# environment
-KONSOLE_DBUS_WINDOW = /Windows/1
 # default
 .SHELLFLAGS := -c
 # environment
@@ -39,23 +37,25 @@ XAUTHORITY = /home/ryancey/.Xauthority
 # default
 MAKE_VERSION := 4.1
 # makefile
-CURDIR := /home/ryancey/Cpp/mpi_isprime
+CURDIR := /home/ryancey/Cpp/mpi_findAllPrimes
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/bin/code
+_ = /usr/share/code/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
-# makefile (from 'makefile', line 4)
-CFLAGS = -c -I./header
-# makefile (from 'makefile', line 10)
-objects := bin/main.o
+# makefile (from 'makefile', line 3)
+CFLAGS = -c -I./header -std=c++20
+# makefile (from 'makefile', line 9)
+objects := bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
+# environment
+IM_CONFIG_PHASE = 2
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -63,15 +63,16 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-OCjxQRaeoH,guid=6c8ff7a41dce2d3ebd96b9f8628b7acd
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-4uQ6xxLXV8,guid=f71761d4bf8aa4eee64211f4628bb2d2
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-8e22e9be-e5e9-48fa-9bd1-5ff75adbf888.sock
+ 
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-f8c08120-8361-4c73-9e53-aed150095ee4.sock
 # environment
-VSCODE_CWD = /home/ryancey/Cpp/mpi_isprime
+VSCODE_CWD = /home/ryancey
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session4
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -81,25 +82,21 @@ GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/3487,unix/whitwell:/tmp/.ICE-unix/3487
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1532,unix/whitwell:/tmp/.ICE-unix/1532
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-WINDOWID = 65011718
-# environment
-KONSOLE_PROFILE_NAME = Default
+TEXTDOMAIN = im-config
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
-# environment
-PROFILEHOME = 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-Bf6HFvJjUSN1/agent.3349
+SSH_AUTH_SOCK = /tmp/ssh-dcz6e1P4JJHF/agent.1363
 # automatic
 %F = $(notdir $%)
 # environment
@@ -107,23 +104,21 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/ryancey/Cpp/mpi_isprime
+PWD = /home/ryancey/Cpp/mpi_findAllPrimes
 # environment
 KDE_SESSION_VERSION = 5
-# makefile (from 'makefile', line 7)
+# makefile (from 'makefile', line 6)
 src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 3429
+SSH_AGENT_PID = 1443
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
-# environment
-VSCODE_CLI = 1
 # environment
 VSCODE_CODE_CACHE_PATH = /home/ryancey/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
@@ -132,8 +127,6 @@ LOGNAME = ryancey
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 KDE_FULL_SESSION = true
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -144,22 +137,18 @@ XDG_VTNR = 1
 MAKELEVEL := 0
 # environment
 MODULE_VERSION_STACK = 3.2.10
-# environment
-COLORTERM = truecolor
-# environment
-KONSOLE_DBUS_SESSION = /Sessions/1
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
 SHLVL = 1
-# makefile (from 'makefile', line 8)
+# makefile (from 'makefile', line 7)
 src1 = $(src:.cpp=.o)
-# makefile (from 'makefile', line 3)
+# makefile (from 'makefile', line 2)
 CC = mpiCC
 # environment
-XDG_SESSION_ID = 7
+XDG_SESSION_ID = 3
 # environment
 USER = ryancey
 # makefile
@@ -170,14 +159,10 @@ XDG_CURRENT_DESKTOP = KDE
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
-# environment
-OLDPWD = /home/ryancey/Cpp
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = 
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -190,8 +175,6 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 LOADEDMODULES = 
-# environment
-SHELL_SESSION_ID = d34e5f1982d54651b6c0302ce36b5b30
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -201,13 +184,11 @@ MODULESHOME = /usr/local/Modules/3.2.10
 # automatic
 +F = $(notdir $+)
 # environment
-NO_AT_BRIDGE = 1
-# environment
 QT_ACCESSIBILITY = 1
 # environment
-COLORFGBG = 15;0
-# environment
 DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
+# environment
+TEXTDOMAINDIR = /usr/share/locale/
 # default
 MAKEFILES := 
 # automatic
@@ -224,8 +205,6 @@ SUFFIXES :=
 GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
-# environment
-KONSOLE_DBUS_SERVICE = :1.45
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -233,13 +212,11 @@ KONSOLE_DBUS_SERVICE = :1.45
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 4192
+VSCODE_PID = 6357
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=9/148=6%
+# Load=102/1024=10%, Rehash=0, Collisions=6/136=4%
 
 # Pattern-specific Variable Values
 
@@ -247,15 +224,15 @@ KDE_SESSION_UID = 926
 
 # Directories
 
-# source (device 54, inode 260628357): 3 files, no impossibilities.
-# . (device 54, inode 258578667): 9 files, no impossibilities.
+# source (device 54, inode 202000774): 6 files, no impossibilities.
+# . (device 54, inode 202000911): 9 files, no impossibilities.
 
-# 12 files, no impossibilities in 2 directories.
+# 15 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 bin/%.o: source/%.cpp
-#  recipe to execute (from 'makefile', line 21):
+#  recipe to execute (from 'makefile', line 20):
 	$(CC) $(CFLAGS) $?
 	mv *.o bin
 
@@ -263,7 +240,7 @@ bin/%.o: source/%.cpp
 
 # Files
 
-all: bin/main.o
+all: bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -271,7 +248,7 @@ all: bin/main.o
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'makefile', line 14):
+#  recipe to execute (from 'makefile', line 13):
 	$(CC) -o run $(objects)
 
 .PHONY: clean
@@ -279,20 +256,52 @@ all: bin/main.o
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-source/main.cpp:
+bin/secondary.o: source/secondary.cpp
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-05-20 16:44:43.246658
+#  Implicit/static pattern stem: 'secondary'
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/secondary.o
+# automatic
+# % := 
+# automatic
+# * := secondary
+# automatic
+# + := source/secondary.cpp
+# automatic
+# | := 
+# automatic
+# < := source/secondary.cpp
+# automatic
+# ^ := source/secondary.cpp
+# automatic
+# ? := source/secondary.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  recipe to execute (from 'makefile', line 20):
+	$(CC) $(CFLAGS) $?
+	mv *.o bin
+
+# Not a target:
+bin/primary.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-20 12:25:29.397145
+#  Last modified 2022-05-23 15:54:23.465751
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+bin/prime_seq.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -300,56 +309,41 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+source/secondary.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-23 12:47:42.304511
+#  File has been updated.
+#  Successfully updated.
+
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 27):
+#  recipe to execute (from 'makefile', line 26):
 	rm -rf all $(objects)
 
-bin/main.o: source/main.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-20 16:27:47.954425
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := bin/main.o
-# automatic
-# % := 
-# automatic
-# * := main
-# automatic
-# + := source/main.cpp
-# automatic
-# | := 
-# automatic
-# < := source/main.cpp
-# automatic
-# ^ := source/main.cpp
-# automatic
-# ? := source/main.cpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'makefile', line 21):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
+# Not a target:
+bin/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=8/1024=1%, Rehash=0, Collisions=0/25=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 22 / storage = 184 B / avg = 8 B
-# current buf: size = 8162 B / used = 184 B / count = 22 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 28 / storage = 281 B / avg = 10 B
+# current buf: size = 8162 B / used = 281 B / count = 28 / avg = 10 B
 
-# strcache performance: lookups = 35 / hit rate = 37%
+# strcache performance: lookups = 41 / hit rate = 31%
 # hash-table stats:
-# Load=22/8192=0%, Rehash=0, Collisions=2/35=6%
-# Finished Make data base on Mon May 23 08:32:49 2022
+# Load=28/8192=0%, Rehash=0, Collisions=2/41=5%
+# Finished Make data base on Mon May 23 15:54:32 2022
 
  
