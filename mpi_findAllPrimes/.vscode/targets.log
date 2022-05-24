@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 23 15:54:32 2022
+# Make data base, printed on Tue May 24 08:52:13 2022
 
 # Variables
 
@@ -63,12 +63,11 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-4uQ6xxLXV8,guid=f71761d4bf8aa4eee64211f4628bb2d2
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-D7Fp8WEePJ,guid=d47faf172c48f971d7d1938a628cd4d6
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
- 
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-f8c08120-8361-4c73-9e53-aed150095ee4.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-931e605f-0df4-4809-869f-3bb2dead1ae7.sock
 # environment
 VSCODE_CWD = /home/ryancey
 # environment
@@ -82,7 +81,7 @@ GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1532,unix/whitwell:/tmp/.ICE-unix/1532
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2432,unix/whitwell:/tmp/.ICE-unix/2432
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
@@ -96,7 +95,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-dcz6e1P4JJHF/agent.1363
+SSH_AUTH_SOCK = /tmp/ssh-ZRfTTNWQ8ULV/agent.2262
 # automatic
 %F = $(notdir $%)
 # environment
@@ -112,7 +111,7 @@ src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1443
+SSH_AGENT_PID = 2342
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
@@ -212,7 +211,7 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 6357
+VSCODE_PID = 3198
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
@@ -293,6 +292,7 @@ bin/primary.o:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-05-23 15:54:23.465751
 #  File has been updated.
 #  Successfully updated.
@@ -344,6 +344,6 @@ bin/main.o:
 # strcache performance: lookups = 41 / hit rate = 31%
 # hash-table stats:
 # Load=28/8192=0%, Rehash=0, Collisions=2/41=5%
-# Finished Make data base on Mon May 23 15:54:32 2022
+# Finished Make data base on Tue May 24 08:52:13 2022
 
  
