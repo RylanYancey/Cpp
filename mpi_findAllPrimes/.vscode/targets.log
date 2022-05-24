@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue May 24 08:52:13 2022
+# Make data base, printed on Tue May 24 09:46:47 2022
 
 # Variables
 
@@ -47,7 +48,7 @@ _ = /usr/share/code/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 3)
-CFLAGS = -c -I./header -std=c++20
+CFLAGS = -c -I./header -std=c++0x
 # makefile (from 'makefile', line 9)
 objects := bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
 # environment
@@ -224,9 +225,9 @@ KDE_SESSION_UID = 926
 # Directories
 
 # source (device 54, inode 202000774): 6 files, no impossibilities.
-# . (device 54, inode 202000911): 9 files, no impossibilities.
+# . (device 54, inode 202000911): 10 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 16 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -292,8 +293,8 @@ bin/primary.o:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
+#  Last modified 2022-05-24 09:46:32.399524
  
-#  Last modified 2022-05-23 15:54:23.465751
 #  File has been updated.
 #  Successfully updated.
 
@@ -312,7 +313,7 @@ bin/prime_seq.o:
 # Not a target:
 source/secondary.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-23 12:47:42.304511
+#  Last modified 2022-05-24 09:40:02.318985
 #  File has been updated.
 #  Successfully updated.
 
@@ -338,12 +339,12 @@ bin/main.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 28 / storage = 281 B / avg = 10 B
-# current buf: size = 8162 B / used = 281 B / count = 28 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 289 B / avg = 9 B
+# current buf: size = 8162 B / used = 289 B / count = 29 / avg = 9 B
 
-# strcache performance: lookups = 41 / hit rate = 31%
+# strcache performance: lookups = 42 / hit rate = 30%
 # hash-table stats:
-# Load=28/8192=0%, Rehash=0, Collisions=2/41=5%
-# Finished Make data base on Tue May 24 08:52:13 2022
+# Load=29/8192=0%, Rehash=0, Collisions=2/42=5%
+# Finished Make data base on Tue May 24 09:46:47 2022
 
  

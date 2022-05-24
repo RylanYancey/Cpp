@@ -1,6 +1,6 @@
 # Compiler Command
 CC = mpiCC
-CFLAGS = -c -I./header -std=c++20
+CFLAGS = -c -I./header -std=c++0x
 
 # collecting object file names
 src = $(wildcard source/*.cpp)
