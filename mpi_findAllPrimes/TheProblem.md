@@ -1,6 +1,8 @@
 
 # What this program does
 
+Note: this program will not finish on its own yet. use CNTR+C to end process. 
+
 ## PRIMARY
 
 Primary is the "Parent" of all other tasks.
@@ -28,3 +30,7 @@ Sometimes, the buffer of primes sent to Primary is empty. You can see this in pr
 I've verified that the buffer is not empty Secondary-side for every time, but it does not seem to make it to Primary.
 
 This is possibly becuase of the way I'm storing the data in the unordered_map requests?
+
+The MPI_Send from which the problem originates is in Secondary.cpp on line 31. 
+
+It is recieved by MPI_Irecv in Primary.cpp on line 81. 
