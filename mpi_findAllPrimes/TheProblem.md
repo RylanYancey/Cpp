@@ -33,4 +33,4 @@ This is possibly becuase of the way I'm storing the data in the unordered_map re
 
 The MPI_Send from which the problem originates is in Secondary.cpp on line 31. 
 
-It is recieved by MPI_Irecv in Primary.cpp on line 81. 
+It is recieved by MPI_Irecv in Primary.cpp on line 81.

@@ -35,6 +35,8 @@ void Primary::task_loop() {
 // Actions to be performed when the target is reached. 
 void Primary::exit_protocol() {
 
+    cout << "Exit Protocol" << endl;
+
     file.close();
 
     // For all of primarys' requests and sends,
@@ -53,8 +55,8 @@ void Primary::exit_protocol() {
     // at this point, all of the secondaries are waiting to
     // recieve, so we send them '0' in data[2] to let them know to complete. 
     for (int i = 1; i < size; i++) {
-        int data[3] {0, 0, 0};
-        MPI_Send(&data, 3, MPI_INT, i, 99, MPI_COMM_WORLD);
+        int data[2] {0, 0};
+        MPI_Send(&data, 2, MPI_INT, i, 99, MPI_COMM_WORLD);
     }
 
 }
@@ -76,8 +78,7 @@ bool Primary::update_requests() {
         {
             // ...so we create a new recieve request and store it
             // in requests, then continue the loop. 
-            MPI_Request request;
-            Data data = Data(request);
+            Data data = Data();
             MPI_Irecv(&data.primes, buf_size, MPI_INT, i, 99, MPI_COMM_WORLD, &data.req);
             requests.insert({i, data});
             continue;
@@ -98,8 +99,9 @@ bool Primary::update_requests() {
                 // once the primes are greater than target,
                 // we know we've reached the end. 
                 if (dat.primes[i] > target) {
-                    return false;
+                    cout << "Here" << endl;
                     requests.erase(i);
+                    return false;
                 }
                 file << dat.primes[i] << endl;
             }
@@ -134,8 +136,8 @@ bool Primary::update_sends() {
         if (send_it == sends.end()) {
             // ...then create an Isend and store its request in sends. 
             MPI_Request request;
-            int data[] = {progress, step, 1};
-            MPI_Isend(&data, 3, MPI_INT, i, 99, MPI_COMM_WORLD, &request);
+            int data[] = {progress, 1};
+            MPI_Isend(&data, 2, MPI_INT, i, 99, MPI_COMM_WORLD, &request);
             sends.insert({i, request});
             // add step to progress to keep moving upward. 
             progress += step;

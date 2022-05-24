@@ -16,8 +16,7 @@ struct Data {
     int primes[buf_size];
     // the constructor instantiates primes[] and
     // overrides the garbage data with zeroes. 
-    Data(MPI_Request request) {
-        this -> req = request;
+    Data() {
         for (int i = 0; i < buf_size; i++)
             primes[i] = 0;
     }

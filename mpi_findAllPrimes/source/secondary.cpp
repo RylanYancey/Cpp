@@ -17,15 +17,15 @@ void Secondary::task_loop() {
     while(true) {
 
         // recieve data from Primary
-        int data[3];
-        MPI_Recv(&data, 3, MPI_INT, 0, 99, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+        int data[2];
+        MPI_Recv(&data, 2, MPI_INT, 0, 99, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
         // exit code 0
         if (data[2] == 0)
             break;
 
         // calculate all primes.
-        find_primes(data[0], data[0] + data[1]);
+        find_primes(data[0], data[0] + step);
 
         // Send data back to primary. 
         MPI_Send(buffer, buf_size, MPI_INT, 0, 99, MPI_COMM_WORLD);
