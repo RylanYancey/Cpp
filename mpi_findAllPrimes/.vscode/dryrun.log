@@ -1,13 +1,7 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/ryancey/Cpp/mpi_findAllPrimes'
-mpiCC -c -I./header -std=c++0x source/secondary.cpp
-mv *.o bin
 mpiCC -c -I./header -std=c++0x source/primary.cpp
 mv *.o bin
-mpiCC -c -I./header -std=c++0x source/prime_seq.cpp
-mv *.o bin
-mpiCC -c -I./header -std=c++0x source/main.cpp
-mv *.o bin
-mpiCC -o run bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
+mpiCC -o run bin/secondary.o bin/primary.o bin/main.o
 make: Leaving directory '/home/ryancey/Cpp/mpi_findAllPrimes'
  

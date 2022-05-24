@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue May 24 09:46:47 2022
+# Make data base, printed on Tue May 24 13:57:28 2022
 
 # Variables
 
@@ -50,7 +50,7 @@ QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 3)
 CFLAGS = -c -I./header -std=c++0x
 # makefile (from 'makefile', line 9)
-objects := bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
+objects := bin/secondary.o bin/primary.o bin/main.o
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
@@ -224,8 +224,8 @@ KDE_SESSION_UID = 926
 
 # Directories
 
-# source (device 54, inode 202000774): 6 files, no impossibilities.
-# . (device 54, inode 202000911): 10 files, no impossibilities.
+# source (device 54, inode 202000774): 5 files, no impossibilities.
+# . (device 54, inode 202000911): 11 files, no impossibilities.
 
 # 16 files, no impossibilities in 2 directories.
 
@@ -240,7 +240,7 @@ bin/%.o: source/%.cpp
 
 # Files
 
-all: bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
+all: bin/secondary.o bin/primary.o bin/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -259,25 +259,35 @@ all: bin/secondary.o bin/primary.o bin/prime_seq.o bin/main.o
 bin/secondary.o: source/secondary.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'secondary'
-#  File does not exist.
+#  Last modified 2022-05-24 13:52:24.638735206
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'makefile', line 20):
+	$(CC) $(CFLAGS) $?
+	mv *.o bin
+
+bin/primary.o: source/primary.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'primary'
+#  Last modified 2022-05-24 13:52:24.983199131
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
-# @ := bin/secondary.o
+# @ := bin/primary.o
 # automatic
 # % := 
 # automatic
-# * := secondary
+# * := primary
 # automatic
-# + := source/secondary.cpp
+# + := source/primary.cpp
 # automatic
 # | := 
 # automatic
-# < := source/secondary.cpp
+# < := source/primary.cpp
 # automatic
-# ^ := source/secondary.cpp
+# ^ := source/primary.cpp
 # automatic
-# ? := source/secondary.cpp
+# ? := source/primary.cpp
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
 #  recipe to execute (from 'makefile', line 20):
@@ -285,24 +295,11 @@ bin/secondary.o: source/secondary.cpp
 	mv *.o bin
 
 # Not a target:
-bin/primary.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-24 09:46:32.399524
- 
+#  Last modified 2022-05-24 13:57:23.895868
 #  File has been updated.
 #  Successfully updated.
-
-# Not a target:
-bin/prime_seq.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -313,7 +310,14 @@ bin/prime_seq.o:
 # Not a target:
 source/secondary.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-24 09:40:02.318985
+#  Last modified 2022-05-24 13:48:48.390173
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+source/primary.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-24 13:56:19.209814
 #  File has been updated.
 #  Successfully updated.
 
@@ -332,19 +336,20 @@ bin/main.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/31=0%
+ 
+# Load=11/1024=1%, Rehash=0, Collisions=0/33=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 289 B / avg = 9 B
-# current buf: size = 8162 B / used = 289 B / count = 29 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 300 B / avg = 10 B
+# current buf: size = 8162 B / used = 300 B / count = 30 / avg = 10 B
 
-# strcache performance: lookups = 42 / hit rate = 30%
+# strcache performance: lookups = 44 / hit rate = 31%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=2/42=5%
-# Finished Make data base on Tue May 24 09:46:47 2022
+# Load=30/8192=0%, Rehash=0, Collisions=2/44=5%
+# Finished Make data base on Tue May 24 13:57:28 2022
 
  

@@ -14,8 +14,6 @@ using namespace std;
 struct Data {
     MPI_Request req;
     int primes[buf_size];
-    // the constructor instantiates primes[] and
-    // overrides the garbage data with zeroes. 
     Data() {
         for (int i = 0; i < buf_size; i++)
             primes[i] = 0;

@@ -28,7 +28,7 @@ void Secondary::task_loop() {
         find_primes(data[0], data[0] + step);
 
         // Send data back to primary. 
-        MPI_Send(buffer, buf_size, MPI_INT, 0, 99, MPI_COMM_WORLD);
+        MPI_Send(&buffer, buf_size, MPI_INT, 0, 99, MPI_COMM_WORLD);
 
         // clear the buffer
         for (int i = 0; i < buf_size; i++)

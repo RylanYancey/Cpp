@@ -15,6 +15,8 @@ Primary::Primary(int size) {
 // Contains the loop.
 void Primary::task_loop() {
 
+    cout << "Entered Task Loop" << endl;
+
     // Loop will continue running until
     // both update_sends() and update_requests() return
     // false. They will return false only when the target is reached. 
@@ -36,21 +38,25 @@ void Primary::task_loop() {
 void Primary::exit_protocol() {
 
     cout << "Exit Protocol" << endl;
+    MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
 
     file.close();
-
+    
     // For all of primarys' requests and sends,
     // Free all MPI_Requests.
     // Erase all data. 
     for (int i = 1; i < size; i++) {
+        cout << "first";
         req_it = requests.find(i);
         MPI_Request_free(&req_it -> second.req);
         requests.erase(i);
-
+        cout << "second";
         send_it = sends.find(i);
         MPI_Request_free(&send_it -> second);
         sends.erase(i);
     }
+
+    cout << "here" << endl;
 
     // at this point, all of the secondaries are waiting to
     // recieve, so we send them '0' in data[2] to let them know to complete. 
@@ -68,7 +74,6 @@ bool Primary::update_requests() {
     
     // for every rank...
     for (int i = 1; i < size; i++) {
-
         // set the iterator to the rank index..
         req_it = requests.find(i);
 
@@ -79,8 +84,9 @@ bool Primary::update_requests() {
             // ...so we create a new recieve request and store it
             // in requests, then continue the loop. 
             Data data = Data();
-            MPI_Irecv(&data.primes, buf_size, MPI_INT, i, 99, MPI_COMM_WORLD, &data.req);
             requests.insert({i, data});
+            req_it = requests.find(i);
+            MPI_Irecv(&req_it -> second.primes, buf_size, MPI_INT, i, 99, MPI_COMM_WORLD, &data.req);
             continue;
         }
 
@@ -99,7 +105,6 @@ bool Primary::update_requests() {
                 // once the primes are greater than target,
                 // we know we've reached the end. 
                 if (dat.primes[i] > target) {
-                    cout << "Here" << endl;
                     requests.erase(i);
                     return false;
                 }
@@ -108,7 +113,6 @@ bool Primary::update_requests() {
             requests.erase(i);
             file << endl;
         }
-
     }
 
     // Everything completed without reaching
@@ -123,10 +127,11 @@ bool Primary::update_sends() {
 
     // for every rank...
     for (int i = 1; i < size; i++) {
-
         // ...if we reach the target, return false. 
         if (progress >= target)
             return false;
+
+        cout << progress << endl;
 
         // point the iterator to the target rank.
         send_it = sends.find(i);
