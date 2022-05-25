@@ -24,3 +24,6 @@ bin/%.o : source/%.cpp
 .PHONY : clean
 clean : 
 	rm -rf all $(objects)
+
+# Debugger Command
+# mpirun -np 4 xterm -e gdb ./run

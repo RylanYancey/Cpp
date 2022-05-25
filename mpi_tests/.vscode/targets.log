@@ -6,19 +6,16 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed May 25 11:17:09 2022
+# Make data base, printed on Wed May 25 09:18:54 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
 # environment
 DESKTOP_SESSION = plasma
-# environment
-KONSOLE_DBUS_WINDOW = /Windows/1
 # default
 .SHELLFLAGS := -c
 # environment
@@ -40,23 +37,25 @@ XAUTHORITY = /home/ryancey/.Xauthority
 # default
 MAKE_VERSION := 4.1
 # makefile
-CURDIR := /home/ryancey/Cpp/mpi_findAllPrimes
+CURDIR := /home/ryancey/Cpp/mpi_tests
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/bin/code
+_ = /usr/share/code/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 3)
 CFLAGS = -c -I./header -std=c++0x
 # makefile (from 'makefile', line 9)
-objects := bin/secondary.o bin/primary.o bin/main.o
+objects := bin/main.o
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
+# environment
+IM_CONFIG_PHASE = 2
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -68,9 +67,9 @@ DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-TiLio4c3Nb,guid=25fbe8f010e22
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-0686a431-09dc-4749-88a5-916a13bf0b54.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-ff323ae0-88f6-4562-96c9-845c9b24fdc8.sock
 # environment
-VSCODE_CWD = /home/ryancey/Cpp/mpi_findAllPrimes
+VSCODE_CWD = /home/ryancey
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
@@ -86,15 +85,11 @@ SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2494,unix/whitwell:/tmp/.ICE-un
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-WINDOWID = 67108870
-# environment
-KONSOLE_PROFILE_NAME = Default
+TEXTDOMAIN = im-config
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
-# environment
-PROFILEHOME = 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -108,7 +103,7 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /home/ryancey/Cpp/mpi_findAllPrimes
+PWD = /home/ryancey/Cpp/mpi_tests
 # environment
 KDE_SESSION_VERSION = 5
 # makefile (from 'makefile', line 6)
@@ -124,8 +119,6 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /home/ryancey/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
 # environment
 LOGNAME = ryancey
@@ -133,8 +126,6 @@ LOGNAME = ryancey
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 KDE_FULL_SESSION = true
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -145,10 +136,6 @@ XDG_VTNR = 1
 MAKELEVEL := 0
 # environment
 MODULE_VERSION_STACK = 3.2.10
-# environment
-COLORTERM = truecolor
-# environment
-KONSOLE_DBUS_SESSION = /Sessions/1
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -171,14 +158,10 @@ XDG_CURRENT_DESKTOP = KDE
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
-# environment
-OLDPWD = /home/ryancey/Cpp
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = 
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -191,8 +174,6 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 LOADEDMODULES = 
-# environment
-SHELL_SESSION_ID = b21b9919a8ef4705a874e3c2fadb332a
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -204,9 +185,9 @@ MODULESHOME = /usr/local/Modules/3.2.10
 # environment
 QT_ACCESSIBILITY = 1
 # environment
-COLORFGBG = 15;0
-# environment
 DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
+# environment
+TEXTDOMAINDIR = /usr/share/locale/
 # default
 MAKEFILES := 
 # automatic
@@ -223,8 +204,6 @@ SUFFIXES :=
 GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
-# environment
-KONSOLE_DBUS_SERVICE = :1.45
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -232,13 +211,11 @@ KONSOLE_DBUS_SERVICE = :1.45
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 12030
+VSCODE_PID = 3943
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=113/1024=11%, Rehash=0, Collisions=9/147=6%
+# Load=102/1024=10%, Rehash=0, Collisions=6/136=4%
 
 # Pattern-specific Variable Values
 
@@ -246,10 +223,10 @@ KDE_SESSION_UID = 926
 
 # Directories
 
-# source (device 54, inode 202000774): 5 files, no impossibilities.
-# . (device 54, inode 202000911): 10 files, no impossibilities.
+# source (device 54, inode 260115175): 3 files, no impossibilities.
+# . (device 54, inode 260115180): 8 files, no impossibilities.
 
-# 15 files, no impossibilities in 2 directories.
+# 11 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -262,14 +239,31 @@ bin/%.o: source/%.cpp
 
 # Files
 
-all: bin/secondary.o bin/primary.o bin/main.o
+all: bin/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := bin/main.o
+# automatic
+# | := 
+# automatic
+# < := bin/main.o
+# automatic
+# ^ := bin/main.o
+# automatic
+# ? := bin/main.o
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
 #  recipe to execute (from 'makefile', line 13):
 	$(CC) -o run $(objects)
 
@@ -278,38 +272,24 @@ all: bin/secondary.o bin/primary.o bin/main.o
 #  Modification time never checked.
 #  File has not been updated.
 
-bin/secondary.o: source/secondary.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'secondary'
-#  Last modified 2022-05-25 09:54:10.496813519
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 20):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
-
-bin/primary.o: source/primary.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'primary'
-#  Last modified 2022-05-25 10:56:14.435412912
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 20):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 source/main.cpp:
 #  Implicit rule search has been done.
  
-#  Last modified 2022-05-25 11:02:59.422644
+#  Last modified 2022-05-24 12:16:30.837191
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 11:12:28.560301
+#  Last modified 2022-05-24 11:51:38.881484
 #  File has been updated.
 #  Successfully updated.
 
@@ -318,20 +298,6 @@ makefile:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-source/secondary.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-24 14:39:19.054751
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-source/primary.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-25 10:55:56.782695
-#  File has been updated.
-#  Successfully updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -344,45 +310,27 @@ clean:
 bin/main.o: source/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-25 09:54:11.165542883
+#  Last modified 2022-05-24 12:16:47.187583303
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := bin/main.o
-# automatic
-# % := 
-# automatic
-# * := main
-# automatic
-# + := source/main.cpp
-# automatic
-# | := 
-# automatic
-# < := source/main.cpp
-# automatic
-# ^ := source/main.cpp
-# automatic
-# ? := source/main.cpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
 	$(CC) $(CFLAGS) $?
 	mv *.o bin
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/37=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/26=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 307 B / avg = 9 B
-# current buf: size = 8162 B / used = 307 B / count = 31 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 21 / storage = 174 B / avg = 8 B
+# current buf: size = 8162 B / used = 174 B / count = 21 / avg = 8 B
 
-# strcache performance: lookups = 46 / hit rate = 32%
+# strcache performance: lookups = 35 / hit rate = 40%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=2/46=4%
-# Finished Make data base on Wed May 25 11:17:09 2022
+# Load=21/8192=0%, Rehash=0, Collisions=2/35=6%
+# Finished Make data base on Wed May 25 09:18:54 2022
 
  

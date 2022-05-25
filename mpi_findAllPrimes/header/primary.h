@@ -15,6 +15,8 @@ struct Data {
     MPI_Request req;
     int primes[buf_size];
     Data() {
+        MPI_Request request;
+        req = request;
         for (int i = 0; i < buf_size; i++)
             primes[i] = 0;
     }
@@ -63,5 +65,7 @@ private:
 
     // represents how many primes have been generated. 
     int progress = 0;
+
+    MPI_Status status;
 
 };

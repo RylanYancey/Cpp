@@ -22,6 +22,8 @@ int main(int argc, char* argv[]) {
     int size;
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
+    cout << rank << endl;
+
     // split between primary and secondary. 
     if (rank == 0)
         Primary primary = Primary(size);

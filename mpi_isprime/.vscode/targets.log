@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May 23 08:32:49 2022
+# Make data base, printed on Wed May 25 10:00:04 2022
 
 # Variables
 
@@ -63,15 +63,15 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-OCjxQRaeoH,guid=6c8ff7a41dce2d3ebd96b9f8628b7acd
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-TiLio4c3Nb,guid=25fbe8f010e221fe013a3c43628e2c61
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-8e22e9be-e5e9-48fa-9bd1-5ff75adbf888.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-12d6c21a-28f4-4085-b270-2a173dfcf536.sock
 # environment
 VSCODE_CWD = /home/ryancey/Cpp/mpi_isprime
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session4
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -81,11 +81,11 @@ GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/3487,unix/whitwell:/tmp/.ICE-unix/3487
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2494,unix/whitwell:/tmp/.ICE-unix/2494
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-WINDOWID = 65011718
+WINDOWID = 67108870
 # environment
 KONSOLE_PROFILE_NAME = Default
 # environment
@@ -99,7 +99,7 @@ PROFILEHOME =
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-Bf6HFvJjUSN1/agent.3349
+SSH_AUTH_SOCK = /tmp/ssh-LQSTE4UFZ5bj/agent.2299
 # automatic
 %F = $(notdir $%)
 # environment
@@ -115,7 +115,7 @@ src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 3429
+SSH_AGENT_PID = 2400
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
@@ -159,7 +159,7 @@ src1 = $(src:.cpp=.o)
 # makefile (from 'makefile', line 3)
 CC = mpiCC
 # environment
-XDG_SESSION_ID = 7
+XDG_SESSION_ID = 3
 # environment
 USER = ryancey
 # makefile
@@ -191,7 +191,7 @@ MFLAGS = -pqrR
 # environment
 LOADEDMODULES = 
 # environment
-SHELL_SESSION_ID = d34e5f1982d54651b6c0302ce36b5b30
+SHELL_SESSION_ID = b21b9919a8ef4705a874e3c2fadb332a
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -235,7 +235,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 4192
+VSCODE_PID = 4366
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
@@ -282,7 +282,6 @@ all: bin/main.o
 # Not a target:
 source/main.cpp:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-05-20 16:44:43.246658
 #  File has been updated.
 #  Successfully updated.
@@ -290,6 +289,7 @@ source/main.cpp:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
+ 
 #  Last modified 2022-05-20 12:25:29.397145
 #  File has been updated.
 #  Successfully updated.
@@ -350,6 +350,6 @@ bin/main.o: source/main.cpp
 # strcache performance: lookups = 35 / hit rate = 37%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=2/35=6%
-# Finished Make data base on Mon May 23 08:32:49 2022
+# Finished Make data base on Wed May 25 10:00:04 2022
 
  
