@@ -21,7 +21,7 @@ void Child::task_loop() {
         MPI_Recv(&data, 2, MPI_INT, 0, 99, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
 
         // exit code 0
-        if (data[2] == 0)
+        if (data[1] == 0)
             break;
 
         // calculate all primes.

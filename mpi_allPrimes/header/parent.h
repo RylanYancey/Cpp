@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <fstream>
 using namespace std;
 
 #include "mpi.h"

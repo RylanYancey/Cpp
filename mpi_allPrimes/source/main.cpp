@@ -23,6 +23,8 @@ int main(int argc, char* argv[]) {
     else
         Child child(size, rank);
 
+    cout << "Finalizing: " << rank <<  endl;
+
     MPI_Finalize();
 
 }
