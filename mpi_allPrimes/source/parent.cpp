@@ -28,7 +28,7 @@ void Parent::task_loop() {
 }
 
 void Parent::exit_protocol() {
-    cout << "Parent Exit Protocol Begun" << endl;
+    cout << "Begin Exit Protocol" << endl;
 
     for (int i = 0; i < requests.size(); i++)
         requests.at(i).kill();

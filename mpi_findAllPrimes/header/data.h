@@ -1,6 +1,31 @@
 
 #pragma once
 
-const int step = 1000;
-const int target = 10050;
-const int buf_size = step / 4;
+#include <iostream>
+using namespace std;
+
+#include "mpi.h"
+
+const int step = 10000;
+const int target = 1000000;
+
+class Data {
+public:
+    
+    Data(int size, int rank);
+
+    bool update(int & progress);
+
+    void kill();
+
+    int rank;
+
+private:
+
+    MPI_Request send;
+
+    int buf[1];
+
+    int size;
+
+};

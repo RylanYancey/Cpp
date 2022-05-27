@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Wed May 25 09:18:54 2022
+# Make data base, printed on Thu May 26 14:07:12 2022
 
 # Variables
 
@@ -28,10 +29,12 @@ VSCODE_LOG_NATIVE = false
 MODULEPATH = /apps/Modules_new_image/versions:/apps/Modules_new_image/$MODULE_VERSION/modulefiles:/apps/Modules_new_image/modulefiles
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+# environment
+GTK_RC_FILES = /etc/gtk/gtkrc:/home/ryancey/.gtkrc:/home/ryancey/.config/gtkrc
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /home/ryancey/.Xauthority
+XAUTHORITY = /tmp/xauth-926-_0
 # automatic
 @F = $(notdir $@)
 # default
@@ -43,7 +46,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/share/code/code
+_ = /usr/bin/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 3)
@@ -54,8 +57,6 @@ objects := bin/main.o
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
-# environment
-IM_CONFIG_PHASE = 2
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -63,13 +64,13 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-TiLio4c3Nb,guid=25fbe8f010e221fe013a3c43628e2c61
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-J2K7yU0hEn,guid=8fbf89516cc1cc1960d5132a628f9624
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-ff323ae0-88f6-4562-96c9-845c9b24fdc8.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-a4de1fa1-c568-482b-ba7a-7cc4a08a6635.sock
 # environment
-VSCODE_CWD = /home/ryancey
+VSCODE_CWD = /home/ryancey/Cpp/mpi_tests
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
@@ -81,21 +82,27 @@ GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2494,unix/whitwell:/tmp/.ICE-unix/2494
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1550,unix/whitwell:/tmp/.ICE-unix/1550
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-TEXTDOMAIN = im-config
+WINDOWID = 54525958
+# environment
+KONSOLE_PROFILE_NAME = Default
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# environment
+GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/ryancey/.gtkrc-2.0:/home/ryancey/.config/gtkrc-2.0
+# environment
+PROFILEHOME = 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-LQSTE4UFZ5bj/agent.2299
+SSH_AUTH_SOCK = /tmp/ssh-J8uWmxWp9QVZ/agent.1404
 # automatic
 %F = $(notdir $%)
 # environment
@@ -111,7 +118,7 @@ src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 2400
+SSH_AGENT_PID = 1484
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # environment
@@ -119,13 +126,17 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
 # environment
-VSCODE_CODE_CACHE_PATH = /home/ryancey/.config/Code/CachedData/da15b6fd3ef856477bf6f4fb29ba1b7af717770d
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/ryancey/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = ryancey
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 KDE_FULL_SESSION = true
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -136,6 +147,10 @@ XDG_VTNR = 1
 MAKELEVEL := 0
 # environment
 MODULE_VERSION_STACK = 3.2.10
+# environment
+COLORTERM = truecolor
+# environment
+KONSOLE_DBUS_SESSION = /Sessions/1
 # default
 MAKE = $(MAKE_COMMAND)
 # default
@@ -158,14 +173,18 @@ XDG_CURRENT_DESKTOP = KDE
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := make
+# environment
+OLDPWD = /home/ryancey/Cpp
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
 # environment
+LANGUAGE = 
+# environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
-VSCODE_IPC_HOOK = /run/user/926/vscode-6d13aa78-1.67.1-main.sock
+VSCODE_IPC_HOOK = /run/user/926/vscode-6d13aa78-1.67.2-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -174,6 +193,8 @@ MFLAGS = -pqrR
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 LOADEDMODULES = 
+# environment
+SHELL_SESSION_ID = e9cf0f13e607415b8df97c0c262fcbf6
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -185,9 +206,9 @@ MODULESHOME = /usr/local/Modules/3.2.10
 # environment
 QT_ACCESSIBILITY = 1
 # environment
-DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
+COLORFGBG = 15;0
 # environment
-TEXTDOMAINDIR = /usr/share/locale/
+DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
 # default
 MAKEFILES := 
 # automatic
@@ -204,6 +225,8 @@ SUFFIXES :=
 GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
+# environment
+KONSOLE_DBUS_SERVICE = :1.38
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -211,11 +234,13 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3943
+TERM = xterm-256color
+# environment
+VSCODE_PID = 20431
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=102/1024=10%, Rehash=0, Collisions=6/136=4%
+# Load=114/1024=11%, Rehash=0, Collisions=9/148=6%
 
 # Pattern-specific Variable Values
 
@@ -224,9 +249,9 @@ KDE_SESSION_UID = 926
 # Directories
 
 # source (device 54, inode 260115175): 3 files, no impossibilities.
-# . (device 54, inode 260115180): 8 files, no impossibilities.
+# . (device 54, inode 260115180): 9 files, no impossibilities.
 
-# 11 files, no impossibilities in 2 directories.
+# 12 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -281,15 +306,15 @@ all: bin/main.o
 # Not a target:
 source/main.cpp:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-05-24 12:16:30.837191
+#  Last modified 2022-05-26 14:01:48.179153
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-24 11:51:38.881484
+#  Last modified 2022-05-26 14:05:56.931657
+ 
 #  File has been updated.
 #  Successfully updated.
 
@@ -310,7 +335,7 @@ clean:
 bin/main.o: source/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-24 12:16:47.187583303
+#  Last modified 2022-05-26 14:05:21.383382923
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
@@ -325,12 +350,12 @@ bin/main.o: source/main.cpp
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 174 B / avg = 8 B
-# current buf: size = 8162 B / used = 174 B / count = 21 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 181 B / avg = 8 B
+# current buf: size = 8162 B / used = 181 B / count = 22 / avg = 8 B
 
-# strcache performance: lookups = 35 / hit rate = 40%
+# strcache performance: lookups = 36 / hit rate = 38%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=2/35=6%
-# Finished Make data base on Wed May 25 09:18:54 2022
+# Load=22/8192=0%, Rehash=0, Collisions=2/36=6%
+# Finished Make data base on Thu May 26 14:07:12 2022
 
  

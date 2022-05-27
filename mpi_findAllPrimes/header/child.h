@@ -2,15 +2,19 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
+#include <fstream>
 using namespace std;
-
-#include "data.h"
 
 #include "mpi.h"
 
-class Secondary {
+#include "data.h"
+
+class Child {
 public:
-    Secondary(int rank, int size);
+
+    Child(int size, int rank);
+
 private:
 
 // Instance Functions
@@ -23,9 +27,12 @@ private:
 
 // Instance Variables
 
-    int buffer[buf_size];
+    ofstream file;
+
+    int input[2] = {0, 0};
+    int success[1] = {1};
 
     int rank;
     int size;
-    
+
 };

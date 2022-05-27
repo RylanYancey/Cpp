@@ -58,7 +58,8 @@ bool Data::update_receive() {
     if (isRecv) {
         work_done++;
         receive = NULL;
-        cout << buffer[0] << endl;
+        int num = buffer[0];
+        cout << num << endl;
         writer.open("primes.txt", fstream::app);
 
         for (int i = 0; i < buf_size; i++) {
@@ -67,11 +68,11 @@ bool Data::update_receive() {
                 writer.close();
                 return true;
             }
-            writer << buffer[i] << ", "; 
+            //writer << buffer[i] << ", "; 
             buffer[i] = 0;
         }
         
-        writer << endl << "- // - " << rank << " - // -" << endl << endl;;
+        writer << endl << "- // - " << rank << " / " << num << " - // -" << endl << endl;
         writer.close();
     }
 
@@ -85,8 +86,6 @@ void Data::kill() {
 
     if (send != NULL)
         MPI_Request_free(&send);
-
-    cout << "Sending Exit Code To: " << rank << endl;
 
     int exit_code[] = {0, 0};
     MPI_Send(&exit_code, 2, MPI_INT, rank, 99, MPI_COMM_WORLD);
