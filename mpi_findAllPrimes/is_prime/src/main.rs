@@ -1,6 +1,11 @@
 
 use std::fs;
 
+/*
+    Rust code for checking if primes.txt has all the promised primes.
+    Also makes sure there are no mistakes. 
+*/
+
 fn main() {
 
     let contents = fs::read_to_string("../primes.txt").expect("Error");
