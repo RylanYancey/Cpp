@@ -6,8 +6,8 @@ using namespace std;
 
 #include "mpi.h"
 
-const int step = 10000;
-const int target = 1000000;
+const int step = 50000;
+const int target = 10000000;
 
 /*
     Each `Data` in existence corresponods to a Child

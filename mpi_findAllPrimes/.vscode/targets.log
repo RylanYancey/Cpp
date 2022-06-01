@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 27 12:28:08 2022
+# Make data base, printed on Wed Jun  1 11:46:02 2022
 
 # Variables
 
@@ -16,6 +16,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 DESKTOP_SESSION = plasma
+# environment
+KONSOLE_DBUS_WINDOW = /Windows/1
 # default
 .SHELLFLAGS := -c
 # environment
@@ -28,12 +30,10 @@ VSCODE_LOG_NATIVE = false
 MODULEPATH = /apps/Modules_new_image/versions:/apps/Modules_new_image/$MODULE_VERSION/modulefiles:/apps/Modules_new_image/modulefiles
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# environment
-GTK_RC_FILES = /etc/gtk/gtkrc:/home/ryancey/.gtkrc:/home/ryancey/.config/gtkrc
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-XAUTHORITY = /tmp/xauth-926-_0
+XAUTHORITY = /home/ryancey/.Xauthority
 # automatic
 @F = $(notdir $@)
 # default
@@ -63,29 +63,33 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-QUK5U1dfT0,guid=a9fc3da374a68d670363ffe76290fbc7
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-XCQzCGQ9mq,guid=56c7df39ad7148eae9942149629759d6
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-82287e23-1d85-4810-9441-d6da3be315ca.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-1fe0369d-17b4-4dfc-b15d-bb3fcfad3a57.sock
 # environment
 VSCODE_CWD = /home/ryancey/Cpp/mpi_findAllPrimes
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/ryancey/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /apps/gcc/10.2.0/bin:/apps/openmpi/3.1.2/bin:/home/ryancey/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+MPI_INC = /apps/openmpi/3.1.2/include
 # environment
 GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1561,unix/whitwell:/tmp/.ICE-unix/1561
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2500,unix/whitwell:/tmp/.ICE-unix/2500
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-WINDOWID = 58720262
+MPI_HOME = /apps/openmpi/3.1.2
+# environment
+WINDOWID = 67108870
 # environment
 KONSOLE_PROFILE_NAME = Default
 # environment
@@ -93,21 +97,23 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-GTK2_RC_FILES = /etc/gtk-2.0/gtkrc:/home/ryancey/.gtkrc-2.0:/home/ryancey/.config/gtkrc-2.0
-# environment
 PROFILEHOME = 
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XKPrhcvVnBA0/agent.1412
+SSH_AUTH_SOCK = /tmp/ssh-xG6xqoosU5nV/agent.2291
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
+MPI_PATH = /apps/openmpi/3.1.2/bin
+# environment
 VSCODE_PIPE_LOGGING = true
+# environment
+MPI_LIB = /apps/openmpi/3.1.2/lib
 # environment
 PWD = /home/ryancey/Cpp/mpi_findAllPrimes
 # environment
@@ -117,13 +123,17 @@ src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1492
+SSH_AGENT_PID = 2374
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# environment
+MANPATH = /apps/openmpi/3.1.2/share/man:/usr/share/man
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
+# environment
+LD_LIBRARY_PATH = /apps/gcc/10.2.0/lib64:/apps/openmpi/3.1.2/lib
 # environment
 VSCODE_CLI = 1
 # environment
@@ -191,9 +201,9 @@ MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-LOADEDMODULES = 
+LOADEDMODULES = openmpi/3.1.2:gcc/10.2.0
 # environment
-SHELL_SESSION_ID = 74917f1470814682a96d966ab8052265
+SHELL_SESSION_ID = 7559db541b5544df9fd99d5652167067
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -202,6 +212,8 @@ GDK_BACKEND = x11
 MODULESHOME = /usr/local/Modules/3.2.10
 # automatic
 +F = $(notdir $+)
+# environment
+NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # environment
@@ -212,6 +224,8 @@ DEFAULTS_PATH = /usr/share/gconf/plasma.default.path
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# environment
+_LMFILES_ = /apps/Modules_new_image/3.2.10/modulefiles/openmpi/3.1.2:/apps/Modules_new_image/3.2.10/modulefiles/gcc/10.2.0
 # environment
 MODULE_VERSION = 3.2.10
 # environment
@@ -225,7 +239,7 @@ GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-KONSOLE_DBUS_SERVICE = :1.35
+KONSOLE_DBUS_SERVICE = :1.52
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -235,11 +249,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 2865
+VSCODE_PID = 20659
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=114/1024=11%, Rehash=0, Collisions=9/148=6%
+# Load=121/1024=12%, Rehash=0, Collisions=9/155=6%
 
 # Pattern-specific Variable Values
 
@@ -248,9 +262,9 @@ KDE_SESSION_UID = 926
 # Directories
 
 # source (device 54, inode 202000774): 6 files, no impossibilities.
-# . (device 54, inode 202000911): 10 files, no impossibilities.
+# . (device 54, inode 202000911): 11 files, no impossibilities.
 
-# 16 files, no impossibilities in 2 directories.
+# 17 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -266,7 +280,8 @@ bin/%.o: source/%.cpp
 bin/parent.o: source/parent.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'parent'
-#  Last modified 2022-05-27 12:08:09.222456309
+#  Last modified 2022-06-01 10:36:02.5048
+ 
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
@@ -282,7 +297,6 @@ all: bin/data.o bin/parent.o bin/child.o bin/main.o
 #  Needs to be updated (-q is set).
 # automatic
 # @ := all
- 
 # automatic
 # % := 
 # automatic
@@ -310,7 +324,7 @@ all: bin/data.o bin/parent.o bin/child.o bin/main.o
 # Not a target:
 source/data.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-27 11:41:00.844037
+#  Last modified 2022-05-27 15:13:51.467192
 #  File has been updated.
 #  Successfully updated.
 
@@ -323,7 +337,7 @@ source/data.cpp:
 # Not a target:
 source/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-27 12:06:30.845506
+#  Last modified 2022-05-31 09:05:37.312502
 #  File has been updated.
 #  Successfully updated.
 
@@ -337,14 +351,14 @@ makefile:
 # Not a target:
 source/child.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-27 12:07:24.215294
+#  Last modified 2022-05-27 15:26:48.164428
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 source/parent.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-27 10:31:06.119608
+#  Last modified 2022-05-27 15:25:30.606803
 #  File has been updated.
 #  Successfully updated.
 
@@ -365,7 +379,7 @@ clean:
 bin/data.o: source/data.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'data'
-#  Last modified 2022-05-27 12:08:08.779355163
+#  Last modified 2022-06-01 10:36:02.229262
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
@@ -375,7 +389,7 @@ bin/data.o: source/data.cpp
 bin/main.o: source/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-27 12:08:10.105166344
+#  Last modified 2022-06-01 10:36:03.008833
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
@@ -385,7 +399,7 @@ bin/main.o: source/main.cpp
 bin/child.o: source/child.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'child'
-#  Last modified 2022-05-27 12:08:09.642893285
+#  Last modified 2022-06-01 10:36:02.742867
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'makefile', line 20):
@@ -400,12 +414,12 @@ bin/child.o: source/child.cpp
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 329 B / avg = 9 B
-# current buf: size = 8162 B / used = 329 B / count = 35 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 340 B / avg = 9 B
+# current buf: size = 8162 B / used = 340 B / count = 36 / avg = 9 B
 
-# strcache performance: lookups = 52 / hit rate = 32%
+# strcache performance: lookups = 53 / hit rate = 32%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=2/52=4%
-# Finished Make data base on Fri May 27 12:28:08 2022
+# Load=36/8192=0%, Rehash=0, Collisions=2/53=4%
+# Finished Make data base on Wed Jun  1 11:46:02 2022
 
  
