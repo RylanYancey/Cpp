@@ -1,7 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/ryancey/Cpp/cuda_tests'
-nvcc -c -I./header -I./kernel -I./source kernel/map.cu
+nvcc -c -I./header -I./kernel -I./source -I./lib/EasyBMP/ kernel/main.cu
 mv *.o bin
-nvcc -o run  bin/map.o
+nvcc -o run  bin/main.o
 make: Leaving directory '/home/ryancey/Cpp/cuda_tests'
  

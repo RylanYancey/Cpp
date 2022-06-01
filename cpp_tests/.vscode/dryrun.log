@@ -1,6 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/ryancey/Cpp/cpp_tests'
-g++ -c -I./header -std=c++20 source/main.cpp
+g++ -c -I./header -std=c++20 -I./lib/EasyBMP/ source/main.cpp
 mv *.o bin
 g++ -o run bin/main.o
 make: Leaving directory '/home/ryancey/Cpp/cpp_tests'

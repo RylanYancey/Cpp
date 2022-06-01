@@ -3,13 +3,12 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "/apps/cuda/cuda10.1/include"
+                "${workspaceFolder}/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/nvcc",
-            "cStandard": "gnu11",
-            "cppStandard": "gnu++20",
+            "compilerPath": "/apps/gcc/10.2.0/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
             "intelliSenseMode": "linux-gcc-x64",
             "configurationProvider": "ms-vscode.makefile-tools"
         }

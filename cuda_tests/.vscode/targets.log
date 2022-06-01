@@ -5,9 +5,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue May 31 13:50:29 2022
+# Make data base, printed on Wed Jun  1 15:59:52 2022
 
 # Variables
 
@@ -36,6 +35,7 @@ MODULEPATH = /apps/Modules_new_image/versions:/apps/Modules_new_image/$MODULE_VE
 # environment
 XAUTHORITY = /home/ryancey/.Xauthority
 # automatic
+ 
 @F = $(notdir $@)
 # default
 MAKE_VERSION := 4.1
@@ -50,15 +50,15 @@ _ = /usr/bin/code
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
 # makefile (from 'makefile', line 13)
-CFLAGS = -c -I./header -I./kernel -I./source
+CFLAGS = -c -I./header -I./kernel -I./source -I./lib/EasyBMP/
 # makefile (from 'makefile', line 22)
-objects := bin/simplex_noise.o bin/main.o
+objects := 
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-plasma:/etc/xdg:/usr/share/kubuntu-default-settings/kf5-settings
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
 # makefile (from 'makefile', line 23)
-kernels := bin/map.o
+kernels := bin/main.o
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -66,29 +66,33 @@ MANDATORY_PATH = /usr/share/gconf/plasma.mandatory.path
 # environment
 XDG_DATA_DIRS = /usr/share/plasma:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-SgOZnsq9Ct,guid=21d9520c8c7b428c8f8d69c362960527
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-XCQzCGQ9mq,guid=56c7df39ad7148eae9942149629759d6
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-c916d301-bb91-47c2-b439-0c9e0810f2ab.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/926/vscode-ipc-039a234e-d82e-4700-b549-bf5c7232dbb4.sock
 # environment
 VSCODE_CWD = /home/ryancey/Cpp/cuda_tests
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session3
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/ryancey/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /apps/gcc/10.2.0/bin:/apps/openmpi/3.1.2/bin:/home/ryancey/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+MPI_INC = /apps/openmpi/3.1.2/include
 # environment
 GPG_AGENT_INFO = /run/user/926/gnupg/S.gpg-agent:0:1
 # environment
 XCURSOR_THEME = breeze_cursors
 # environment
-SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/1552,unix/whitwell:/tmp/.ICE-unix/1552
+SESSION_MANAGER = local/whitwell:@/tmp/.ICE-unix/2500,unix/whitwell:/tmp/.ICE-unix/2500
 # environment
 XDG_RUNTIME_DIR = /run/user/926
 # environment
-WINDOWID = 69206022
+MPI_HOME = /apps/openmpi/3.1.2
+# environment
+WINDOWID = 67108870
 # environment
 KONSOLE_PROFILE_NAME = Default
 # environment
@@ -102,13 +106,17 @@ PROFILEHOME =
 # environment
 XDG_SESSION_DESKTOP = KDE
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-nrN5HIuI4R5X/agent.1400
+SSH_AUTH_SOCK = /tmp/ssh-xG6xqoosU5nV/agent.2291
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
+MPI_PATH = /apps/openmpi/3.1.2/bin
+# environment
 VSCODE_PIPE_LOGGING = true
+# environment
+MPI_LIB = /apps/openmpi/3.1.2/lib
 # environment
 PWD = /home/ryancey/Cpp/cuda_tests
 # environment
@@ -118,13 +126,17 @@ src = $(wildcard source/*.cpp)
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 1480
+SSH_AGENT_PID = 2374
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = KDE
+# environment
+MANPATH = /apps/openmpi/3.1.2/share/man:/usr/share/man
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/ryancey
+# environment
+LD_LIBRARY_PATH = /apps/gcc/10.2.0/lib64:/apps/openmpi/3.1.2/lib
 # environment
 VSCODE_CLI = 1
 # environment
@@ -189,14 +201,15 @@ VSCODE_IPC_HOOK = /run/user/926/vscode-6d13aa78-1.67.2-main.sock
 gpu = $(wildcard kernel/*.cu)
 # makefile
 MAKEFLAGS = pqrR
+ 
 # environment
 MFLAGS = -pqrR
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-LOADEDMODULES = 
+LOADEDMODULES = openmpi/3.1.2:gcc/10.2.0
 # environment
-SHELL_SESSION_ID = 7f2e9fb72e3a4eb78604e9363bca0828
+SHELL_SESSION_ID = 7559db541b5544df9fd99d5652167067
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
@@ -216,6 +229,8 @@ MAKEFILES :=
 # automatic
 <F = $(notdir $<)
 # environment
+_LMFILES_ = /apps/Modules_new_image/3.2.10/modulefiles/openmpi/3.1.2:/apps/Modules_new_image/3.2.10/modulefiles/gcc/10.2.0
+# environment
 MODULE_VERSION = 3.2.10
 # environment
 LC_ALL = C
@@ -230,7 +245,7 @@ GS_LIB = /home/ryancey/.fonts
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-KONSOLE_DBUS_SERVICE = :1.48
+KONSOLE_DBUS_SERVICE = :1.52
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # default
@@ -240,11 +255,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 16099
+VSCODE_PID = 32020
 # environment
 KDE_SESSION_UID = 926
 # variable set hash-table stats:
-# Load=116/1024=11%, Rehash=0, Collisions=9/152=6%
+# Load=123/1024=12%, Rehash=0, Collisions=9/160=6%
 
 # Pattern-specific Variable Values
 
@@ -252,11 +267,11 @@ KDE_SESSION_UID = 926
 
 # Directories
 
-# source (device 54, inode 262563560): 4 files, no impossibilities.
+# source (device 54, inode 262563560): 2 files, no impossibilities.
 # kernel (device 54, inode 262563476): 3 files, no impossibilities.
-# . (device 54, inode 262563392): 8 files, no impossibilities.
+# . (device 54, inode 262563392): 12 files, no impossibilities.
 
-# 15 files, no impossibilities in 3 directories.
+# 17 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -274,28 +289,31 @@ bin/%.o: kernel/%.cu
 
 # Files
 
-# Not a target:
-kernel/map.cu:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-31 13:45:29.228208
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-source/simplex_noise.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-31 12:29:51.64256
-#  File has been updated.
-#  Successfully updated.
-
-all: bin/simplex_noise.o bin/main.o bin/map.o
+all: bin/main.o
 #  Command line target.
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := all
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := bin/main.o
+# automatic
+# | := 
+# automatic
+# < := bin/main.o
+# automatic
+# ^ := bin/main.o
+# automatic
+# ? := bin/main.o
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
 #  recipe to execute (from 'makefile', line 29):
 	$(CC) -o run $(objects) $(kernels)
 
@@ -305,47 +323,24 @@ all: bin/simplex_noise.o bin/main.o bin/map.o
 #  File has not been updated.
 
 # Not a target:
-source/main.cpp:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-05-31 12:38:51.034732
-#  File has been updated.
-#  Successfully updated.
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-31 13:18:37.028798
+#  Last modified 2022-06-01 14:47:31.111189
 #  File has been updated.
 #  Successfully updated.
 
-bin/map.o: kernel/map.cu
+# Not a target:
+kernel/main.cu:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'map'
-#  File does not exist.
+#  Last modified 2022-06-01 15:53:37.148414
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := bin/map.o
-# automatic
-# % := 
-# automatic
-# * := map
-# automatic
-# + := kernel/map.cu
-# automatic
-# | := 
-# automatic
-# < := kernel/map.cu
-# automatic
-# ^ := kernel/map.cu
-# automatic
-# ? := kernel/map.cu
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'makefile', line 37):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -353,48 +348,38 @@ bin/map.o: kernel/map.cu
 #  Modification time never checked.
 #  File has not been updated.
 
-bin/simplex_noise.o: source/simplex_noise.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'simplex_noise'
-#  Last modified 2022-05-31 13:18:38.380632089
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 33):
-	$(CC) $(CFLAGS) $?
-	mv *.o bin
-
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'makefile', line 43):
-	rm -rf all $(objects) $(kernels)
+	rm ./bin/*.o
 
-bin/main.o: source/main.cpp
+bin/main.o: kernel/main.cu
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2022-05-31 13:18:38.606282133
+#  Last modified 2022-06-01 15:53:39.46115971
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'makefile', line 33):
+#  recipe to execute (from 'makefile', line 37):
 	$(CC) $(CFLAGS) $?
 	mv *.o bin
 
 # files hash-table stats:
-# Load=12/1024=1%, Rehash=0, Collisions=0/38=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/27=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 316 B / avg = 10 B
-# current buf: size = 8162 B / used = 316 B / count = 31 / avg = 10 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 232 B / avg = 8 B
+# current buf: size = 8162 B / used = 232 B / count = 27 / avg = 8 B
 
-# strcache performance: lookups = 50 / hit rate = 38%
+# strcache performance: lookups = 45 / hit rate = 40%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=3/50=6%
-# Finished Make data base on Tue May 31 13:50:29 2022
+# Load=27/8192=0%, Rehash=0, Collisions=3/45=7%
+# Finished Make data base on Wed Jun  1 15:59:52 2022
 
  

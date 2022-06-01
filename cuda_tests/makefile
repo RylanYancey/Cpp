@@ -10,7 +10,7 @@
 
 # Compiler Command
 CC = nvcc
-CFLAGS = -c -I./header -I./kernel -I./source
+CFLAGS = -c -I./header -I./kernel -I./source -I./lib/EasyBMP/
 
 # collecting object file names
 src = $(wildcard source/*.cpp)

@@ -1,9 +1,5 @@
 
 #include <iostream>
-#include <fstream>
-#include <stdlib.h>
-#include <chrono>
-#include <thread>
 using namespace std;
 
 #include "mpi.h"
@@ -19,16 +15,15 @@ int main(int argc, char* argv[]) {
     int size;
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    ofstream file;
-    #pragma ompi master
+    if (rank == 0)
     {
-        file.open("hi.txt", fstream::app);
-        file << rank << endl;
-        file << rank << endl;
-        file << rank << endl;
-        file << rank << endl;
-        file << rank << endl;
-        file.close();
+        int message[] {1, 1};
+        MPI_Send(&message, 2, MPI_INT, 1, 99, MPI_COMM_WORLD);
+    }
+    else
+    {
+        int message[] {0, 0};
+        MPI_Recv(&message, 2, MPI_INT, 0, 99, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     }
 
     MPI_Finalize();
